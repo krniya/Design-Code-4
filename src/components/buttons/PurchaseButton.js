@@ -16,10 +16,15 @@ const Wrapper = styled.div`
     align-items: center;
     gap: 20px;
     transition: 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-
+    *, & {
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
     :hover {
         box-Shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 30px 60px rgba(23, 0, 102, 0.5), inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
         transform: translateY(-3px);
+        .icon {
+            transform: scale(1.2)
+        }
     }
 `
 const Title = styled(Caption2)`
@@ -43,6 +48,9 @@ const IconWrapper = styled.div`
     align-items: center;
     justify-self: center;
     position: relative;
+    ${Wrapper}:hover & {
+        filter: hue-rotate(10deg) brightness(150%) saturate(120%)
+    }
 `
 const TextWrapper = styled.div`
     display: grid;
@@ -52,6 +60,9 @@ const Ring = styled.img`
     position: absolute;
     top: -15px;
     left: -16px;
+    ${Wrapper}:hover &  {
+        transform: rotate(30deg) scale(1.2) translate(1px, 1px)
+    }
 
 `
 
@@ -62,7 +73,7 @@ export default function PurchaseButton(props) {
         <Link to="/page-2">
             <Wrapper>
                 <IconWrapper>
-                    <Icon src="images/icons/credit.svg" />
+                    <Icon src="images/icons/credit.svg" className="icon" />
                     <Ring src="images/icons/icon-ring.svg" />
                 </IconWrapper>
                 <TextWrapper>
