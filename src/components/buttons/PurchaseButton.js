@@ -49,7 +49,7 @@ const IconWrapper = styled.div`
     justify-self: center;
     position: relative;
     ${Wrapper}:hover & {
-        filter: hue-rotate(10deg) brightness(150%) saturate(120%)
+        filter: hue-rotate(10deg) brightness(150%) saturate(120%);
     }
 `
 const TextWrapper = styled.div`
