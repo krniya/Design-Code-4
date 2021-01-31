@@ -4,9 +4,10 @@ import { H1, MediumText } from '../styles/TextStyles'
 import { themes } from '../styles/ColorStyles'
 import PurchaseButton from '../buttons/PurchaseButton'
 import MockupAnimations from '../animations/MockupAnimations'
+import WaveBackgrond from '../backgrounds/WaveBackgrond'
 
 const Wrapper = styled.div`
-    background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
+    /* background: linear-gradient(180deg, #4316db 0%, #9076e7 100%); */
     overflow: hidden;
 `
 const ContentWraper = styled.div`
@@ -32,7 +33,9 @@ const Description = styled(MediumText)`
 
 function HeroSection() {
     return (
+
         <Wrapper>
+            <WaveBackgrond />
             <ContentWraper>
                 <TextWrappper>
                     <Title>Design <br /> And code React apps</Title>
